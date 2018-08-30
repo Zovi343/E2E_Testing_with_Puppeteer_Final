@@ -1,6 +1,6 @@
 # Webpack 4 Setup
 
-Simple setup for react application 
+Simple webpack 4 setup for react application 
 
 ### Installing
 ```
