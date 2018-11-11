@@ -1,14 +1,23 @@
 # Webpack 4 Setup
 
-Simple webpack 4 setup for react application 
+Example of Puppeteer integration with Jest using jest-puppeteer library
 
 ### Installing
 ```
 install dependencies:
-    yarn install
+    npm install
 ```
 
-### In order to run setup
+### Run application
 ```
-yarn dev-server
+npm run dev-server
 ```
+
+### Run test suite
+```
+npm run test
+```
+### Run test suite without headless mode
+,,,
+HEADLESS="false" npm run test
+,,,
