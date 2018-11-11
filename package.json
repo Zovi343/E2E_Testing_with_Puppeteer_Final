@@ -1,12 +1,21 @@
 {
-  "name": "webpack-4-setup",
+  "name": "e2_puppeteer-testing",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --config  webpack.prod.js",
     "dev-server": "webpack-dev-server --open --config webpack.dev.js"
+  },
+  "jest": {
+    "preset": "jest-puppeteer",
+    "globals": {
+      "PATH": "http://localhost:8080"
+    },
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ]
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -16,10 +25,14 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
+    "jest": "^23.6.0",
+    "jest-puppeteer": "^3.5.0",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
+    "puppeteer": "^1.10.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.17.1",

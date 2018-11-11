@@ -1,0 +1,41 @@
+.btn {
+    border:none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: .8rem 2.8rem;
+    outline: none;
+    transition: all .3s;
+
+    &:hover{
+        transform: translateY(-3px);
+    }
+
+    &:active {
+        outline: none;
+        transform: scale(0.95) translateY(0);
+    }
+}
+
+.btn--white {
+    background-color: $color-grey-light-1;
+    border: solid 2px rgb(184, 33, 58);
+    color: rgb(184, 33, 58);
+
+    &:hover {
+        background-color: rgb(184, 33, 58);
+        color: $color-white;
+    }
+
+    &:disabled {
+        color: $color-white;
+        background-color: $color-grey-dark-3;
+        border: solid 2px $color-grey-dark-3; 
+        transform: translateY(0)
+    }
+
+    &:focus {
+        background-color:rgb(184, 33, 58);
+        color: $color-white;  
+    }
+}

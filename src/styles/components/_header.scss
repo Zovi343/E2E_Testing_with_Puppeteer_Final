@@ -1,0 +1,39 @@
+.header {
+    background-color: #345;
+    border-bottom: solid 1px rgb(175, 175, 175);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+.navigation {
+    height: 3.5rem;
+    width: 100%;
+    background-color: rgb(75, 105, 134);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_link {
+        text-decoration: none;
+        margin-right: 2rem;
+        color: white;
+    }
+}
+
+.pupp {
+    color: #0ba;
+}
+
+.jest {
+    color: rgb(184, 33, 58);
+}

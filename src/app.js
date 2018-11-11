@@ -1,11 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AppRouter from './routers/AppRouter';
 import './styles/main.scss'
 
-const jsx = (
-    <p className="hello">Hello there!</p>
-);
-
-console.log('test');
-
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<AppRouter />, document.getElementById('app'));
