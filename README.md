@@ -18,6 +18,6 @@ npm run dev-server
 npm run test
 ```
 ### Run test suite without headless mode
-,,,
+```
 HEADLESS="false" npm run test
-,,,
+```
