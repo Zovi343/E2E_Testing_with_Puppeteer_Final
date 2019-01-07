@@ -3,9 +3,8 @@ import React from 'react';
 const Home = () => (
     <div className="home"> 
         <div>
-            <h2> What will be covered</h2>
+            <h2>What will you learn</h2>
             <ol>
-                <li>Basic introduction to testing</li>
                 <li>What is Puppeteer</li>
                 <li>How to Integrate Puppeteer with Jest</li>
                 <li>Emulating mobile device</li>

@@ -9,7 +9,7 @@ describe('Take screenshots', () => {
     test('Take screenshot of home page', async () => {
         await page.setViewport({ width: 1920, height: 1080 })
         await page.screenshot({
-            path: './screenshots/home.jpg',
+            path: './src/test/screenshots/home.jpg',
             fullpage: true,
             type: 'jpeg'
         });
@@ -19,7 +19,7 @@ describe('Take screenshots', () => {
         const iPhonex = devices['iPhone X'];
         await page.emulate(iPhonex);
         await page.screenshot({
-            path: './screenshots/home-mobile.jpg',
+            path: './src/test/screenshots/home-mobile.jpg',
             fullpage: true,
             type: 'jpeg'
         });

@@ -1,3 +1,4 @@
 node_modules/
 public/dist/
-screenshots/
+!src/test/screenshots/.gitkeep
+src/test/screenshots/*
