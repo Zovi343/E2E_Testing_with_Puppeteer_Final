@@ -1,4 +1,4 @@
-# Webpack 4 Setup
+# End-to-End testing With Puppeteer and Jest
 
 Example of Puppeteer integration with Jest using jest-puppeteer library
 
