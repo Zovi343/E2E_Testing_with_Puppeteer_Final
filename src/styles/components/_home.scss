@@ -6,14 +6,28 @@
     height: 100%;
 
     display: flex;
+    flex-direction: column;
+}
+
+.main_content {
+    display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-h2 {
+.learn_header {
     font-weight: 600;
     text-decoration: underline;
     margin-bottom: 2rem;
+}
+
+.link_header {
+    font-weight: 600;
+    text-align: center;
+}
+
+.repo_link {
+    text-decoration: none;
 }
 
 ol {

@@ -8,15 +8,6 @@
     "build": "webpack --config  webpack.prod.js",
     "dev-server": "webpack-dev-server --open --config webpack.dev.js"
   },
-  "jest": {
-    "preset": "jest-puppeteer",
-    "globals": {
-      "PATH": "http://localhost:8080"
-    },
-    "testMatch": [
-      "**/test/**/*.test.js"
-    ]
-  },
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",

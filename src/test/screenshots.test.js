@@ -1,7 +1,9 @@
+const timeout = process.env.SLOWMO ? 30000 : 20000;
+
 const devices = require('puppeteer/DeviceDescriptors');
 
 beforeAll(async () => {
-    await page.goto(PATH, {waitUntil: 'domcontentloaded'})
+    await page.goto(URL, {waitUntil: 'domcontentloaded'})
 });
 
 describe('Take screenshots', () => {
@@ -13,7 +15,7 @@ describe('Take screenshots', () => {
             fullpage: true,
             type: 'jpeg'
         });
-    });
+    }, timeout);
 
     test('Emulate Mobile Device And take screenshot', async () => {
         const iPhonex = devices['iPhone X'];
@@ -23,5 +25,5 @@ describe('Take screenshots', () => {
             fullpage: true,
             type: 'jpeg'
         });
-    });
+    }, timeout);
 });

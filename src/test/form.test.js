@@ -1,6 +1,7 @@
+const timeout = process.env.SLOWMO ? 30000 : 20000;
 
 beforeAll(async () => {
-    await page.goto(PATH, {waitUntil: 'domcontentloaded'});
+    await page.goto(URL, {waitUntil: 'domcontentloaded'});
 });
 
 describe('Test form', () => {
@@ -25,10 +26,10 @@ describe('Test form', () => {
         });
 
         expect(html).toBe('Successfully signed up!');
-    }, 20000);
+    }, timeout);
 
     test('Submit form with invalid data', async () => {
-        await page.goto(`${PATH}/login`, {waitUntil: 'domcontentloaded'});
+        await page.goto(`${URL}/login`, {waitUntil: 'domcontentloaded'});
         
         await page.waitForSelector('form');
         await page.type('#name', 'Rick');
@@ -46,7 +47,7 @@ describe('Test form', () => {
         });
 
         expect(html).toBe('Passwords do not match!');
-    }, 20000);
+    }, timeout);
 });
 
 
