@@ -1,4 +1,4 @@
-const timeout = process.env.SLOWMO ? 30000 : 20000;
+const timeout = process.env.SLOWMO ? 70000 : 20000;
 
 beforeAll(async () => {
     await page.goto(URL, {waitUntil: 'domcontentloaded'});

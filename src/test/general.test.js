@@ -1,4 +1,4 @@
-const timeout = process.env.SLOWMO ? 30000 : 20000;
+const timeout = process.env.SLOWMO ? 70000 : 20000;
 
 beforeAll(async () => {
     await page.goto(URL, {waitUntil: 'domcontentloaded'});
@@ -16,7 +16,8 @@ describe('General Tests', () => {
             }
         });
         await page.goto(URL, {waitUntil: 'domcontentloaded'});
-        // await jestPuppeteer.debug()
+        // await jestPuppeteer.debug();
+        
     }, timeout);
     
     test('Target newly opened tab', async () => {
@@ -25,7 +26,9 @@ describe('General Tests', () => {
 
         const newPage = await newPagePromise;
         const title = await newPage.title();
-        // In progress ...
-    });
+        await newPage.close();
+
+        expect(title).toBe('GitHub - Zovi343/E2E_Testing_with_Puppeteer_Final')
+    }, timeout);
 
 });
