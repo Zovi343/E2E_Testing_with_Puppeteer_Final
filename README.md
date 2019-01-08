@@ -21,3 +21,5 @@ npm run test
 ```
 HEADLESS="false" npm run test
 ```
+Image
+![test](https://github.com/Zovi343/E2E_Testing_with_Puppeteer_Final/blob/master/public/img/jest-puppeteer.png)
