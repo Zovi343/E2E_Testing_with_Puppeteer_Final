@@ -1,5 +1,4 @@
-const timeout = process.env.SLOWMO ? 70000 : 20000;
-
+const timeout = process.env.SLOWMO ? 30000 : 10000;
 const devices = require('puppeteer/DeviceDescriptors');
 
 beforeAll(async () => {
@@ -7,7 +6,6 @@ beforeAll(async () => {
 });
 
 describe('Take screenshots', () => {
-
     test('Take screenshot of home page', async () => {
         await page.setViewport({ width: 1920, height: 1080 })
         await page.screenshot({
