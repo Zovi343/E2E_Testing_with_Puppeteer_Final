@@ -16,8 +16,10 @@ describe('Take screenshots', () => {
     }, timeout);
 
     test('Emulate Mobile Device And take screenshot', async () => {
+        await page.goto(`${URL}/login`, {waitUntil: 'domcontentloaded'})
         const iPhonex = devices['iPhone X'];
         await page.emulate(iPhonex);
+        await page.setViewport({ width: 375, height: 812, isMobile: true});
         await page.screenshot({
             path: './src/test/screenshots/home-mobile.jpg',
             fullpage: true,
