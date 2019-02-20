@@ -17,9 +17,7 @@ describe('Test form', () => {
         await page.click('[type="submit"]');
 
         await page.waitForSelector('.success');
-        const html = await page.evaluate(() => {
-            return document.querySelector('.success').innerHTML;
-        });
+        const html = await page.$eval('.success', el => el.innerHTML);
 
         expect(html).toBe('Successfully signed up!');
     }, timeout);
@@ -37,9 +35,7 @@ describe('Test form', () => {
         await page.click('[type="submit"]');
 
         await page.waitForSelector('.error');
-        const html = await page.evaluate(() => {
-            return document.querySelector('.error').innerHTML;
-        });
+        const html = await page.$eval('.error', el => el.innerHTML);
 
         expect(html).toBe('Passwords do not match!');
     }, timeout);
